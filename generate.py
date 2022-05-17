@@ -9,13 +9,13 @@ data = {
 
 address_set = set() 
 
-with open(os.path.join(os.getcwd(), "raw", "2022_Apr_7_snapshot", "auctions_per_creator.txt")) as f:
+with open(os.path.join(os.getcwd(), "raw", "2022_May_17_snapshot", "auctions_per_creator.txt")) as f:
     lines = f.readlines()
     for line in lines:
         if line[0:2] == "\\x":
             address_set.add("0x" + line[2:].strip())
 
-with open(os.path.join(os.getcwd(), "raw", "2022_Apr_7_snapshot", "campaigns_created_by_buyer.txt")) as f:
+with open(os.path.join(os.getcwd(), "raw", "2022_May_17_snapshot", "campaigns_created_by_buyer.txt")) as f:
     lines = f.readlines()
     for line in lines:
         if line[0:2] == "\\x":
